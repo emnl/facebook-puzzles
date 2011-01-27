@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+require 'diffinder'
+
+text = File.open(ARGV[0].to_s).read
+diff = Diffinder.new(text, 'wordlist.txt') # /var/tmp/twl06.txt
+puts diff.getTotalDiff
